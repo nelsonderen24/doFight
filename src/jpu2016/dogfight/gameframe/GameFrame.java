@@ -1,10 +1,13 @@
 package jpu2016.dogfight.gameframe;
 
+import java.awt.event.KeyEvent;
 import java.util.Observable;
 
-public class GameFrame {
+public class GameFrame extends JFrame {
+	
+	private IEventPerformer eventPerformer;
 
-	public GameFrame(String title, IEvenPerformer performer, IGraphicsBuilder GraphicsBuilder, Observable observable) {
+	public GameFrame(String title, IEventPerformer performer, IGraphicsBuilder GraphicsBuilder, Observable observable) {
 
 	}
 
@@ -16,7 +19,15 @@ public class GameFrame {
 	
 	}
 
-	public void keyTyped((KeyEvent keyEvent) {
+	public void keyTyped(KeyEvent keyEvent) {
 	
+	}
+
+	public IEventPerformer getEventPerformer() {
+		return eventPerformer;
+	}
+
+	public void setEventPerformer(IEventPerformer eventPerformer) {
+		this.eventPerformer = eventPerformer;
 	}
 }
