@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Image;
 import java.awt.Point;
 
-public class Mobile {
+public class Mobile implements IMobile {
 	
 	private int speed;
 	private Direction direction;
@@ -15,53 +15,96 @@ public class Mobile {
 	public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image) {
 		
 	}
-	
+
+
+	@Override
 	public Direction getDirection() {
-		return direction;
 		
+		return null;
 	}
-	
+
+
+	@Override
 	public void setDirection(Direction direction) {
+		
 		
 	}
 
-	public Point getPosition() {
+
+	@Override
+	public Point getPositon() {
+		
 		return null;
-		
 	}
-	
+
+
+	@Override
 	public Dimension getDimension() {
-		return dimension;
-		
+
+		return null;
 	}
-	
-	public int getSpeed() {
-		return speed;
-		
-	}
-	
+
+
+	@Override
 	public int getWidth() {
-		return speed;
-		
+		return 0;
 	}
-	
-	public int getHeigh() {
-		return speed;
-		
+
+
+	@Override
+	public int getHeight() {
+		return 0;
 	}
-	
+
+
+	@Override
+	public int getSpeed() {
+		return 0;
+	}
+
+
+	@Override
+	public Image getImage() {
+		return null;
+	}
+
+
+	@Override
 	public void move() {
 		
 	}
-	
-	public void placeInArea(IArea area ) {
+
+
+	@Override
+	public void placeInAera(IArea aera) {
 		
 	}
-	
+
+
+	@Override
 	public boolean isPlayer(int player) {
 		return false;
+	}
+
+
+	@Override
+	public void setDogfightModel(DogfightModel dogfightModel) {
 		
 	}
+
+
+	@Override
+	public boolean hit() {
+		return false;
+	}
+
+
+	@Override
+	public boolean isWeapon() {
+		return false;
+	}
+	
+	
 	
 	private void moveUP() {
 		
@@ -83,30 +126,13 @@ public class Mobile {
 		return null;
 		
 	}
-	
-	public IDogfightModel getDogfightModel() {
+
+	@Override
+	public DogfightModel getDogfightModel() {
 		return null;
 		
 	}
 	
-	public void setDogfightModel(DogfightModel dogfightModel){
-		
-	}
-	
-	public boolean hit() {
-		return false;
-		
-	}
-	
-	public boolean isWeapon() {
-		return false;
-		
-	}
-	
-	public Image getImage() {
-		return null;
-		
-	}
 	
 	
 }
