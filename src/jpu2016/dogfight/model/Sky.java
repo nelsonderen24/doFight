@@ -4,6 +4,8 @@ import java.awt.Image;
 
 public class Sky implements IArea {
 	
+	private Dimention dimention;
+	
 	public Sky(Dimension dimension) {
 		
 	}
