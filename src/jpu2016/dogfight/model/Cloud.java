@@ -1,6 +1,6 @@
 package jpu2016.dogfight.model;
 
-public class Cloud {
+public class Cloud extends Mobile {
 	
 	private static int SPEED = 1;
 	private static int WIDTH = 300;
@@ -8,10 +8,8 @@ public class Cloud {
 	private static String IMAGE ="cloud";
 	
 	
-	
-	
 	public Cloud(Direction direction, Dimension dimension) {
-		
+		super(direction, null, dimension, SPEED, IMAGE);
 	}
 	
 	public static int getSPEED() {
@@ -20,8 +18,6 @@ public class Cloud {
 	public static void setSPEED(int sPEED) {
 		SPEED = sPEED;
 	}
-
-
 
 
 	public static int getWIDTH() {
@@ -34,15 +30,19 @@ public class Cloud {
 	public static void setWIDTH(int wIDTH) {
 		WIDTH = wIDTH;
 	}
+	
 	public static int getHEIGHT() {
 		return HEIGHT;
 	}
+	
 	public static void setHEIGHT(int hEIGHT) {
 		HEIGHT = hEIGHT;
 	}
+	
 	public static String getIMAGE() {
 		return IMAGE;
 	}
+	
 	public static void setIMAGE(String iMAGE) {
 		IMAGE = iMAGE;
 	}
