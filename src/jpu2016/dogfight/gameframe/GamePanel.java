@@ -4,8 +4,14 @@ import java.awt.Graphics;
 import java.util.Observable;
 import java.util.Observer;
 
-public class GamePanel implements Observer {
+import javax.swing.JPanel;
+
+public class GamePanel extends JPanel implements Observer {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2161404628904046106L;
 	private IGraphicsBuilder graphicsBuilder;
 
 public GamePanel (IGraphicsBuilder graphicBuilder){
