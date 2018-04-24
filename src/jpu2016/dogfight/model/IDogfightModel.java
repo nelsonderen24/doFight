@@ -2,8 +2,11 @@ package jpu2016.dogfight.model;
 
 public class IDogfightModel {
 
+	private Sky sky;
 	
-	public IArea getAera() {
+	
+	public IArea getArea() {
+		return null;
 		
 	}
 	
@@ -17,6 +20,14 @@ public class IDogfightModel {
 	
 	public ArrayListe<IMobile> getMobiles(){
 		
+	}
+
+	public Sky getSky() {
+		return sky;
+	}
+
+	public void setSky(Sky sky) {
+		this.sky = sky;
 	}
 	
 }
