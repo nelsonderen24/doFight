@@ -2,40 +2,86 @@ package jpu2016.dogfight.model;
 
 import java.util.ArrayList;
 
-public class DogfightModel {
+public class DogfightModel implements IDogfightModel {
+	
+	private Sky sky;
+	private ArrayList<IMobile> mobiles;
 
 	public DogfightModel() {
-
+		this.setSky(new Sky(null));
 	}
 
-	public IArea getIArea() {
+	
+
+	public Sky getSky() {
+		return sky;
+	}
+
+	public void setSky(Sky sky) {
+		this.sky = sky;
+	}
+
+
+
+	@Override
+	public IArea getArea() {
+		// TODO Auto-generated method stub
 		return null;
-
 	}
 
+
+
+	@Override
 	public void buildArea(Dimension dimension) {
+		
+		
 	}
 
+
+
+	@Override
 	public void addMobile(IMobile Mobile) {
-
+		
+		
 	}
 
+
+
+	@Override
 	public void removeMobile(IMobile Mobile) {
-
+		
+		
 	}
 
+
+
+	@Override
 	public ArrayList<IMobile> getMobiles() {
+		
 		return null;
-
 	}
 
+
+
+	@Override
 	public IMobile getMobileByPlayer(int player) {
+		
 		return null;
-
 	}
 
-	public void setMobilesHavesMoved() {
 
+
+	@Override
+	public void setMobilesHavesMoved() {
+		
+		
+	}
+
+
+
+	
+	public void setMobiles(ArrayList<IMobile> mobiles) {
+		this.mobiles = mobiles;
 	}
 
 }
