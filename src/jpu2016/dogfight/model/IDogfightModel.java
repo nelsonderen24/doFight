@@ -1,34 +1,13 @@
 package jpu2016.dogfight.model;
 
-public class IDogfightModel {
+public interface IDogfightModel {
 
-	private Sky sky;
+	public IArea getArea();
 	
+	public void buildArea(Dimension dimension);
 	
-	public IArea getArea() {
-		return null;
-		
-	}
+	public void addMobile(Imobile Mobile);
 	
-	public void buildAera(Dimension dimension) {
-		
-	}
-	
-	public void addMobile(Mobile mobile) {
-		
-	}
-	
-	public ArrayListe<IMobile> getMobiles(){
-		
-	}
-
-	public Sky getSky() {
-		return sky;
-	}
-
-	public void setSky(Sky sky) {
-		this.sky = sky;
-	}
+	public ArrayList<IMobile> getMobiles();
 	
 }
-
