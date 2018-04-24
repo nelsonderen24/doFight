@@ -10,10 +10,11 @@ public class Mobile implements IMobile {
 	private Direction direction;
 	private Position position;
 	private Dimension dimension;
+	private Image[] images;
 	
 	
 	public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image) {
-		
+		this.setImages(new Image[4]);
 	}
 
 
@@ -131,6 +132,22 @@ public class Mobile implements IMobile {
 	public DogfightModel getDogfightModel() {
 		return null;
 		
+	}
+
+
+	/**
+	 * @return the images
+	 */
+	public Image[] getImages() {
+		return images;
+	}
+
+
+	/**
+	 * @param images the images to set
+	 */
+	public void setImages(Image[] images) {
+		this.images = images;
 	}
 	
 	

@@ -4,6 +4,8 @@ import java.util.Observable;
 
 import jpu2016.dogfight.controller.IOrderPerformer;
 import jpu2016.dogfight.gameframe.GameFrame;
+import jpu2016.dogfight.gameframe.IEventPerformer;
+import jpu2016.dogfight.gameframe.IGraphicsBuilder;
 import jpu2016.dogfight.model.IDogfightModel;
 
 
@@ -17,7 +19,7 @@ public class DogFightView implements IviewSystem, Runnable {
 	public DogFightView(IOrderPerformer orderPerformer, IDogfightModel dogfightModel, Observable observable) {
 		this.setEventPerformer(new EventPerformer(orderPerformer));
 		this.setGraphicsBuilder(new GraphicsBuilder(dogfightModel));
-		this.setGameFrame(new GameFrame());
+		this.setGameFrame(new GameFrame("test", eventPerformer, graphicsBuilder, observable));
 	}
 
 

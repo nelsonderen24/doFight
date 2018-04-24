@@ -4,36 +4,30 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 
+import jpu2016.dogfight.gameframe.IGraphicsBuilder;
 import jpu2016.dogfight.model.DogfightModel;
 import jpu2016.dogfight.model.IDogfightModel;
 import jpu2016.dogfight.model.IMobile;
 
-public class GraphicsBuilder {
+public class GraphicsBuilder implements IGraphicsBuilder {
 
 	private DogfightModel dogfightModel = new DogfightModel();
 	private BufferedImage emptySky;
 	
 	public GraphicsBuilder(IDogfightModel dogfightModel) {
-	//	this.setEmptySky(new BufferedImage());
+		this.setEmptySky(new BufferedImage(getGlobalWidth(), getGlobalHeight(), 0));
 		
 	}
-	public void applyModelToGraphic(Graphics graphics, ImageObserver observer) {
-		
-	}
+
+
 	private void buildEmptySky() {
 		
 	}
+	
 	private void drawmobile(IMobile mobile, Graphics graphics, ImageObserver observer) {
 		
 	}
-	public int getGlobalWidth() {
-		return 0;
-		
-	}
-	public int getGlobalHeight() {
-		return 0;
-		
-	}
+	
 	
 	public DogfightModel getDogfightModel() {
 		return dogfightModel;
@@ -49,5 +43,23 @@ public class GraphicsBuilder {
 	
 	public void setEmptySky(BufferedImage emptySky) {
 		this.emptySky = emptySky;
+	}
+
+
+	@Override
+	public void applyModelToGraphic(Graphics graphics, ImageObserver observer) {
+		
+	}
+
+
+	@Override
+	public int getGlobalWidth() {
+		return 0;
+	}
+
+
+	@Override
+	public int getGlobalHeight() {
+		return 0;
 	}
 }
