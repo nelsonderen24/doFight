@@ -15,7 +15,7 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 	private BufferedImage emptySky;
 	
 	public GraphicsBuilder(IDogfightModel dogfightModel) {
-		this.setEmptySky(new BufferedImage(getGlobalWidth(), getGlobalHeight(), 0));
+		this.setEmptySky(new BufferedImage(getGlobalWidth(), getGlobalHeight(), 2));
 		
 	}
 
@@ -54,12 +54,12 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 
 	@Override
 	public int getGlobalWidth() {
-		return 0;
+		return 5;
 	}
 
 
 	@Override
 	public int getGlobalHeight() {
-		return 0;
+		return 5;
 	}
 }
