@@ -1,10 +1,13 @@
 package jpu2016.dogfight.model;
 
+import java.awt.Image;
+import java.awt.Point;
+
 public interface IMobile {
 
 	public Direction getDirection();
 	
-	public void setDirection(Direction direction();
+	public void setDirection(Direction direction);
 	
 	public Point getPositon();
 	
@@ -20,7 +23,7 @@ public interface IMobile {
 	
 	public void move();
 	
-	public void placeInAera(IAera aera);
+	public void placeInAera(IArea aera);
 	
 	public boolean isPlayer(int player);
 	

@@ -1,6 +1,8 @@
 package jpu2016.dogfight.model;
 
-public interface IAera {
+import java.awt.Image;
+
+public interface IArea {
 	
 	public Dimension getDimension();
 	
